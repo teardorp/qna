@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>q&a</title>
+  <style>
+    @font-face {
+      font-family: 'Mikado Ultra';
+      src: url('Mikado Ultra.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+        @font-face {
+      font-family: 'Mikado Regular';
+      src: url('Mikado Regular.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+            @font-face {
+      font-family: 'Mikado Bold';
+      src: url('Mikado Bold.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+            @font-face {
+      font-family: 'Mikado Regular Italic';
+      src: url('Mikado Regular Italic.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+            @font-face {
+      font-family: 'Mikado Bold Italic';
+      src: url('Mikado Bold Italic.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+                @font-face {
+      font-family: 'Mikado Black';
+      src: url('Mikado Black.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    body {
+      background-image: url('cookie wall!!!1.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top 0px;
+    }
+    
+      body {
+      background-image: url('milk i think.png'), url('cookie wall!!!1.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top 0px;
+    }
+    
+        input[type="text"] {
+      font-size: 14px;
+      padding-left: 10px;
+      border-radius: 10px;
+      border: 2px solid #888;
+      font-family: 'Mikado Regular', sans-serif;
+      width: 400px;
+      height: 30px;
+      resize: none;  
+      transform: translateX(15px);
+    }
+    
+        button {
+      width: 70px;
+      height: 40px;
+      font-size: 18px;
+      background-color: #000000;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 10px;
+      font-family: 'Mikado Bold', sans-serif;
+      transform: translateX(15px);
+    }
+
+    button:hover {
+      background-color: #ffffff;
+      color: black
+    }
+    
+    
+    .title {
+      font-size: 80px;
+      text-align: center;
+      padding-top: 160px;
+    }
+    
+    .outline {
+  color: #4d1d00;
+  -webkit-text-stroke: 15px #ffeeba;
+  font-family: 'Mikado Ultra', sans-serif;
+}
+
+      .right {
+  position: relative;
+  right: 90px;     
+  text-align: right; 
+}
+
+.center {
+  position: absolute;
+  text-align: center;
+}
+
+.height {
+    line-height: 1;
+}
+
+.top {
+  color: #4d1d00;
+  z-index: 2;
+  font-family: 'Mikado Ultra', sans-serif;
+  top: 0px;
+}
+
+.bottom {
+      z-index: 1;
+      font-family: 'Mikado Ultra', sans-serif;
+      top: 0px;
+}
+
+.mikreg {
+  font-family: 'Mikado Regular', sans-serif;
+  color: white;
+  padding-left: 15px;
+  line-height: 1;
+}
+
+.mikbold {
+  font-family: 'Mikado Bold', sans-serif;
+  color: white;
+  padding-left: 15px;
+  line-height: 1;
+}
+
+h2.mikbold {
+  line-height: 0.5; 
+  margin-bottom: 10px;
+}
+
+.mikregit {
+  font-family: 'Mikado Regular Italic', sans-serif;
+  color: white;
+}
+
+.mikboldit {
+  font-family: 'Mikado Bold Italic', sans-serif;
+  color: white;
+}
+
+.paddingl {
+    padding-left: 15px;
+}
+
+.space {
+  display: inline-block;
+  width: 30px;
+  pointer-events: none; 
+  user-select: none;
+}
+
+.space2 {
+  display: inline-block;
+  width: 15px;
+  pointer-events: none; 
+  user-select: none;
+}
+
+.linkc {
+    color: #ff8f33;
+}
+
+.mikbl {
+  font-family: 'Mikado Black', sans-serif;
+  color: white;
+  padding-left: 15px;
+  line-height: 1;
+}
+
+.copyr {
+  font-size: 28px;
+}
+
+.padding {
+    padding: 10px;
+}
+      
+  </style>
+</head>
+<body>
+<h1 class= "title right center height top">ASK ME SOME<br>QUESTIONS!</h1>
+<h1 class= "title right center height outline bottom">ASK ME SOME<br>QUESTIONS!</h1>
+<p class= "mikreg">send in a question here!</p>
+<form action="https://fabform.io/f/7OneYIn" method="POST">
+    <input type="text" name="question" placeholder="question" required />
+    <button type="submit">enter</button>
+  </form>
+  <div id="result"></div>
+<h2 class= "mikbold padding">BEFORE YOU ASK THOUGH:</h2>
+<p class= "mikbold">· no topics regarding racism, sexism, transphobia, or any<br>other discriminatory subjects. <span class= "mikboldit">end of story.</span></p>
+<p class= "mikreg">· no political questions — american or otherwise.</p>
+<p class= "mikreg">· please keep all asked questions SFW <span class= "mikregit">(safe for work)</span>.</p>
+<p class= "mikreg">· please refrain from asking REAL personal questions. i'm not necessarily the<br>most open-ended person to be answering those types of questions.</p>
+<p class= "mikreg">· please don't be one of those aggressive types. i'm very sensitive toward those<br>types of people, and i'd rather not feel intimidated.</p>
+<p class= "mikbold">· entering a name is OPTIONAL. if you don't feel comfortable exposing who you are,<br>it's completely fine.</p>
+<h1 class= "mikbold"><a href="https://teardorp.neocities.org/questions" class="linkc">click here to see the questions page!</a></h1>
+  <span class="space2"></span>
+    <p class= "mikbl copyr">teardropicecream - 2025</p>
+</body>
+</html>
