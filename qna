@@ -192,7 +192,6 @@
       padding: 10px;
     }
 
-    /* Screen reader only label */
     .sr-only {
       position: absolute;
       width: 1px;
@@ -230,9 +229,7 @@
   <p class="mikbl copyr">teardropicecream - 2025</p>
 
   <script>
-    // After submit, show confirmation and clear input
     document.getElementById('question-form').addEventListener('submit', function(e) {
-      // Let the form submit normally (POST to fabform)
       e.preventDefault();
 
       const form = e.target;
