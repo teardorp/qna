@@ -48,7 +48,7 @@
     }
     
     body {
-      background-image: url('images/milk i think.png'), url('images/cookie wall!!!1.png');
+      background-image: url('images/milk_i_think.png'), url('images/cookie_wall!!!1.png');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center top 0px;
@@ -191,17 +191,33 @@
     .padding {
       padding: 10px;
     }
+
+    /* Screen reader only label */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
   </style>
 </head>
 <body>
   <h1 class="title right center height top">ASK ME SOME<br>QUESTIONS!</h1>
   <h1 class="title right center height outline bottom">ASK ME SOME<br>QUESTIONS!</h1>
   <p class="mikreg">send in a question here!</p>
-  <form action="https://fabform.io/f/7OneYIn" method="POST">
-    <input type="text" name="question" placeholder="question" required />
+
+  <form id="question-form" action="https://fabform.io/f/7OneYIn" method="POST">
+    <label for="question-input" class="sr-only">Your question</label>
+    <input type="text" id="question-input" name="question" placeholder="question" required />
     <button type="submit">enter</button>
   </form>
-  <div id="result"></div>
+
+  <div id="result" class="mikreg padding"></div>
+
   <h2 class="mikbold padding">BEFORE YOU ASK THOUGH:</h2>
   <p class="mikbold">· no topics regarding racism, sexism, transphobia, or any<br>other discriminatory subjects. <span class="mikboldit">end of story.</span></p>
   <p class="mikreg">· no political questions — american or otherwise.</p>
@@ -212,5 +228,30 @@
   <h1 class="mikbold"><a href="https://teardorp.neocities.org/questions" class="linkc">click here to see the questions page!</a></h1>
   <span class="space2"></span>
   <p class="mikbl copyr">teardropicecream - 2025</p>
+
+  <script>
+    // After submit, show confirmation and clear input
+    document.getElementById('question-form').addEventListener('submit', function(e) {
+      // Let the form submit normally (POST to fabform)
+      e.preventDefault();
+
+      const form = e.target;
+      const formData = new FormData(form);
+      
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+      }).then(response => {
+        if (response.ok) {
+          document.getElementById('result').textContent = 'Thank you! Your question has been submitted.';
+          form.reset();
+        } else {
+          document.getElementById('result').textContent = 'Oops! Something went wrong. Please try again later.';
+        }
+      }).catch(() => {
+        document.getElementById('result').textContent = 'Oops! Something went wrong. Please try again later.';
+      });
+    });
+  </script>
 </body>
 </html>
